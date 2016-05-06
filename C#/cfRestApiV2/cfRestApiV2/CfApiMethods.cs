@@ -173,9 +173,18 @@ namespace com.cryptofacilities.REST.v2
         #region private endpoints
 
         // Returns key account information
+        // Deprecated because it returns info about the Futures margin account only
+        [Obsolete("getAccount is deprecated, please use getAccounts instead.")]
         public String getAccount()
         {
             var endpoint = "/api/v2/account";
+            return makeRequest("GET", endpoint);
+        }
+
+        // Returns key account information
+        public String getAccounts()
+        {
+            var endpoint = "/api/v2/accounts";
             return makeRequest("GET", endpoint);
         }
 
