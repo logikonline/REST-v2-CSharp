@@ -65,9 +65,9 @@ namespace com.cryptofacilities.REST.v2.Examples
             /*----------------------------Private Endpoints----------------------------------------------*/
             methods = new CfApiMethods(apiPath, apiPublicKey, apiPrivateKey, checkCertificate);
 
-            //get account
-            result = methods.getAccount();
-            Console.WriteLine("getAccount:\n" + result);
+            //get accounts
+            result = methods.getAccounts();
+            Console.WriteLine("getAccounts:\n" + result);
 
             //send limit order
             orderType = "lmt";
